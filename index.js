@@ -18,9 +18,9 @@ app.use("/browse/*", (req, res) => {
     const stat = fs.statSync(filepath);
     const isFile = stat.isFile();
     if (isFile) {
-      data.files.push(`files/${baseDir}/${file}`);
+      data.files.push(`files${baseDir}/${file}`);
     } else {
-      data.dir.push(`browse/${baseDir}/${file}`);
+      data.dir.push(`browse${baseDir}/${file}`);
     }
   });
   res.json(data);
